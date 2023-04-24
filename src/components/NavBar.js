@@ -3,6 +3,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import { TwitterIcon, GithubIcon, LinkedInIcon, FaceBookIcon } from "./Icons";
+import { motion } from "framer-motion";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -33,18 +34,42 @@ const NavBar = () => {
 
       <nav className="flex items-center justify-center flex-wrap">
         {/* target={"_blank"} will open this link in new tab  */}
-        <Link href="/" target={"_blank"}>
+        <motion.a
+          href="/"
+          target={"_blank"}
+          whileHover={{ y: -3 }}
+          whileTap={{ scale: 3 }}
+          className="w-6 mr-3"
+        >
           <TwitterIcon />
-        </Link>
-        <Link href="/" target={"_blank"}>
+        </motion.a>
+        <motion.a
+          href="https://github.com/nuwandm"
+          target={"_blank"}
+          whileHover={{ y: -3 }}
+          whileTap={{ scale: 3 }}
+          className="w-6 mx-3"
+        >
           <GithubIcon />
-        </Link>
-        <Link href="/" target={"_blank"}>
+        </motion.a>
+        <motion.a
+          href="https://www.linkedin.com/in/nuwanmadusanka/"
+          target={"_blank"}
+          whileHover={{ y: -3 }}
+          whileTap={{ scale: 3 }}
+          className="w-6 mx-3"
+        >
           <LinkedInIcon />
-        </Link>
-        <Link href="/" target={"_blank"}>
+        </motion.a>
+        <motion.a
+          href="https://web.facebook.com/nuwan1sanka"
+          target={"_blank"}
+          whileHover={{ y: -3 }}
+          whileTap={{ scale: 3 }}
+          className="w-6 ml-3"
+        >
           <FaceBookIcon />
-        </Link>
+        </motion.a>
       </nav>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />

@@ -11,7 +11,7 @@ const Footer = () => {
         <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
         <div className="flex items-center">
           Bulild By&nbsp;
-          <span className="text-primary" text-2xl px-1>
+          <span className="text-primary text-2xl px-1" >
             &#9825; &nbsp;
           </span>
           <Link

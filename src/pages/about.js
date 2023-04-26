@@ -6,6 +6,7 @@ import Image from "next/image";
 import profilePic from "../../public/images/profile/developer-pic-2.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import AnimatedNumbers from "../components/AnimatedNumbers";
+import Skills from "@/components/Skills";
 
 const about = () => {
   return (
@@ -72,7 +73,7 @@ const about = () => {
               </div>
               <div className="flex flex-col items-end justify-center ">
                 <span className="inline-block text-7xl font-bold">
-                  <AnimatedNumbers value={100} />+
+                  <AnimatedNumbers value={100} />%
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75  ">
                   Dedication
@@ -80,6 +81,7 @@ const about = () => {
               </div>
             </div>
           </div>
+          <Skills/>
         </Layout>
       </main>
     </>

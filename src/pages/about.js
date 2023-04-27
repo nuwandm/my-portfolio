@@ -7,6 +7,8 @@ import profilePic from "../../public/images/profile/developer-pic-2.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import AnimatedNumbers from "../components/AnimatedNumbers";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 const about = () => {
   return (
@@ -52,7 +54,7 @@ const about = () => {
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 ">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
-              <Image src={profilePic} alt="Profile Image" />
+              <Image src={profilePic} alt="Profile Image" priority={true}/>
             </div>
             <div className=" col-span-2 flex flex-col items-end justify-between ">
               <div className="flex flex-col items-end justify-center ">
@@ -82,6 +84,8 @@ const about = () => {
             </div>
           </div>
           <Skills/>
+          <Experience/>
+          <Education/>
         </Layout>
       </main>
     </>

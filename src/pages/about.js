@@ -70,7 +70,7 @@ const about = () => {
                   <AnimatedNumbers value={5} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75  ">
-                  Projects Compleated by me
+                  Projects Compleated
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center ">

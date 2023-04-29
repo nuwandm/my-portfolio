@@ -138,8 +138,6 @@ const projects = () => {
                 github="/"
               />
             </div>
-            <div className="col-span-6">Project -3</div>
-            <div className="col-span-6">Project -4</div>
           </div>
         </Layout>
       </main>

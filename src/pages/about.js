@@ -52,9 +52,10 @@ const about = () => {
                 you.
               </p>
             </div>
+            {/* profile pic section */}
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 ">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
-              <Image src={profilePic} alt="Profile Image" priority={true}/>
+              <Image src={profilePic} alt="Profile Image" priority={true} />
             </div>
             <div className=" col-span-2 flex flex-col items-end justify-between ">
               <div className="flex flex-col items-end justify-center ">
@@ -83,9 +84,9 @@ const about = () => {
               </div>
             </div>
           </div>
-          <Skills/>
-          <Experience/>
-          <Education/>
+          <Skills />
+          <Experience />
+          <Education />
         </Layout>
       </main>
     </>

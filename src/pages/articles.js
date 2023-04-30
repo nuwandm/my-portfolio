@@ -56,19 +56,19 @@ const Article = ({ img, title, link, time }) => {
     <motion.li
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light dark:bg-dark  text-dark dark:text-light first:mt-0 border border-solid border-dark dark:border-light
     border-r-4 border-b-4"
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-primary font-semibold pl-4">{time}</span>
+      <span className="text-primary dark:text-primaryDark  font-semibold pl-4">{time}</span>
     </motion.li>
   );
 };
 
 const FeaturedArticle = ({ img, title, summery, link, time }) => {
   return (
-    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative">
-      <div className="absolute -top-0 -right-4 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
+    <li className="col-span-1 w-full p-4 bg-light dark:bg-dark border border-solid border-dark dark:border-light rounded-2xl relative">
+      <div className="absolute -top-0 -right-4 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl" />
       <Link
         href={link}
         target="_blank"
@@ -84,12 +84,12 @@ const FeaturedArticle = ({ img, title, summery, link, time }) => {
         />
       </Link>
       <Link href={link} alt={title} className="w-full h-auto">
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline">
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline  dark:text-light">
           {title}
         </h2>
       </Link>
-      <p className="text-sm- mb-2">{summery}</p>
-      <span className="text-primary font-semibold">{time}</span>
+      <p className="text-sm- mb-2 dark:text-light">{summery}</p>
+      <span className="text-primary dark:text-primaryDark font-semibold">{time}</span>
     </li>
   );
 };
@@ -120,7 +120,7 @@ const articles = () => {
               time="9 min to read"
             />
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center my-32">
+          <h2 className="font-bold text-4xl w-full text-center my-32 dark:text-light">
             All Articles
           </h2>
           <ul>

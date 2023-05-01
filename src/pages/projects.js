@@ -73,7 +73,7 @@ const Project = ({ type, title, img, link, github }) => {
           className="w-full h-auto"
           whileHover={{ scale: 1.09 }}
           transition={{ duration: 0.2 }}
-          priority={true}
+          priority="true"
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               50vw"

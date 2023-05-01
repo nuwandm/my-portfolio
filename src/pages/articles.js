@@ -81,7 +81,7 @@ const FeaturedArticle = ({ img, title, summery, link, time }) => {
           className="w-full h-auto"
           whileHover={{ scale: 1.09 }}
           transition={{ duration: 0.2 }}
-          priority={true}
+          property="true"
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"

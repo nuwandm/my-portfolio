@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "@/components/Icons";
 import project1 from "../../public/images/projects/project1.jpg";
+import project2 from "../../public/images/projects/project2.jpg";
+import project3 from "../../public/images/projects/project3.png";
 import { motion } from "framer-motion";
 const FramerImage = motion(Image);
 const FeateruedProject = ({ type, title, summery, img, link, github }) => {
@@ -144,31 +146,33 @@ const projects = () => {
           <div className="grid grid-col-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 ">
             <div className="col-span-12">
               <FeateruedProject
-                title="website for Coffie shop"
+                title="React Dashboard"
                 type="Featured Project"
-                summery="Little summery"
+                summery="React dashboard using JavaScript, CSS, and HTML"
                 img={project1}
-                link="/"
-                github="/"
+                link="https://github.com/nuwandm/admin_dashboard"
+                github="https://github.com/nuwandm/admin_dashboard"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="website for Coffie shop"
+                title="MERN App For Workout Tracking"
                 type="Featured Project"
-                img={project1}
-                link="/"
-                github="/"
+                img={project2}
+                link="https://github.com/nuwandm/Exercise-Tracking-App--MERN-STACK"
+                github="https://github.com/nuwandm/Exercise-Tracking-App--MERN-STACK"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="website for Coffie shop"
-                type="Featured Project"
-                img={project1}
+                title="Machine learning approach for analyzing the user
+comments of trending music videos on YouTube to identify
+the influencing factors"
+                type="University Research Project"
+                img={project3}
                 link="/"
                 github="/"
-              />{" "}
+              />
             </div>
             <div className="col-span-12">
               {" "}

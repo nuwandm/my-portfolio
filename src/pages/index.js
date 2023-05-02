@@ -35,7 +35,7 @@ export default function Home() {
               <AnimatedText
                 text={"Nuwan Madusanka"}
                 className="!text-6xl !text-left
-                xl:!text-5xl  lg:!text-6xl sm:!text-3xl"
+                xl:!text-5xl  lg:!text-6xl sm:!text-3xl sm:!pl-5"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
               As an experienced Front-End Developer, my focus is on transforming concepts into cutting-edge web applications. 

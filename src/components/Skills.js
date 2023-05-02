@@ -30,7 +30,7 @@ const Skills = () => {
       sm:bg-circularLightSm sm:dark:bg-circularDarkSm
       ">
         <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light shadow-dark p-8 cursor-pointer  dark:text-dark dark:bg-lime-200  xs:font-bold lg:p-6 md:p-4 xs:text-xs xs:p-2 "
+          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light shadow-dark p-7 cursor-pointer  dark:text-dark dark:bg-lime-200  xs:font-bold lg:p-6 md:p-4 xs:text-xs xs:p-2 "
           whileHover={{ scale: 1.5 }}
         >
           web

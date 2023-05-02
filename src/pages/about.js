@@ -19,7 +19,10 @@ const about = () => {
       </Head>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText text="Passion Fuels Purpose!" className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8" />
+          <AnimatedText
+            text="Passion Fuels Purpose!"
+            className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+          />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-3 flex-com items-start justify-start xl:col-span-4 md:order-2 md:col-span-8 ">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
@@ -66,7 +69,7 @@ const about = () => {
             </div>
             <div className=" col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3 ">
               <div className="flex flex-col items-end justify-center xl-items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl ">
                   <AnimatedNumbers value={2} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm ">
@@ -86,7 +89,7 @@ const about = () => {
                   <AnimatedNumbers value={100} />%
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm  ">
-                  Dedication
+                  Dedication on task
                 </h2>
               </div>
             </div>

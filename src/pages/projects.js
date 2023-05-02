@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "@/components/Icons";
 import project1 from "../../public/images/projects/project1.jpg";
-import project2 from "../../public/images/projects/project2.jpg";
+import project2 from "../../public/images/projects/Project2.jpg";
 import project3 from "../../public/images/projects/project3.png";
 import { motion } from "framer-motion";
 const FramerImage = motion(Image);

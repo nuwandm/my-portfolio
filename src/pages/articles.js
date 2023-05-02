@@ -44,7 +44,7 @@ const MovingImg = ({ title, img, link }) => {
         whileInView={{ opacity: 1, transition: { duration: 0.3 } }}
         src={img}
         alt={title}
-        className="z-10 w-96 h-auto absolute hidden rounded-lg"
+        className="z-10 w-96 h-auto absolute hidden rounded-lg md:!hidden"
         ref={imgRef}
       />
     </Link>
@@ -57,10 +57,10 @@ const Article = ({ img, title, link, time }) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light dark:bg-dark  text-dark dark:text-light first:mt-0 border border-solid border-dark dark:border-light
-    border-r-4 border-b-4"
+    border-r-4 border-b-4 sm:flex-col "
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-primary dark:text-primaryDark  font-semibold pl-4">{time}</span>
+      <span className="text-primary dark:text-primaryDark  font-semibold pl-4 xs:text-sm">{time}</span>
     </motion.li>
   );
 };
@@ -88,7 +88,9 @@ const FeaturedArticle = ({ img, title, summery, link, time }) => {
         />
       </Link>
       <Link href={link} alt={title} className="w-full h-auto">
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline  dark:text-light">
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline  dark:text-light
+        xs:text-lg
+        ">
           {title}
         </h2>
       </Link>
@@ -109,8 +111,11 @@ const articles = () => {
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
         <Layout className="pt-16">
-          <AnimatedText text="Knowledge Sharing" className="mb-16" />
-          <ul className="grid grid-cols-2 gap-16">
+          <AnimatedText
+            text="Knowledge Sharing"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+          />
+          <ul className="grid grid-cols-2 gap-16 lag:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               img={article1}
               title="Buld A Custom Pagination Component In ReactJs From Scratch"

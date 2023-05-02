@@ -45,7 +45,9 @@ const FeateruedProject = ({ type, title, summery, img, link, github }) => {
             {title}
           </h2>
         </Link>
-        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm ">{summery}</p>
+        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm ">
+          {summery}
+        </p>
 
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10">
@@ -69,9 +71,11 @@ const Project = ({ type, title, img, link, github }) => {
       className="w-full flex flex-col items-center justify-center rounded-2xl
     border border-solid border-dark bg-light dark:border-light dark:bg-dark p-6  relative xs:p-4 "
     >
-      <div className="absolute top-0 -right-2 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl
+      <div
+        className="absolute top-0 -right-2 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl
        md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]
-      " />
+      "
+      />
       <Link
         href={link}
         target="_blank"
@@ -90,9 +94,11 @@ const Project = ({ type, title, img, link, github }) => {
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary dark:text-primaryDark font-medium text-xl
+        <span
+          className="text-primary dark:text-primaryDark font-medium text-xl
         lg:text-lg md:text-base
-        ">
+        "
+        >
           {type}
         </span>
         <Link
@@ -133,9 +139,7 @@ const projects = () => {
         <Layout className="pt-16">
           <AnimatedText
             text={"Projects Done By Me"}
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl
-          
-          "
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-col-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 ">
             <div className="col-span-12">

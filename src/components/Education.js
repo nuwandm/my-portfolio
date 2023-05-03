@@ -49,7 +49,7 @@ const Education = () => {
           />
           <Details
             type="GCE Advanced Level"
-            time="2017-2022"
+            time="2015"
             place="Kegalu Vidyalaya"
             info="I studied Mathematics, Physics, and Chemistry for  advanced level, gaining a deep understanding of these core sciences and developing strong analytical and problem-solving skills."
           />

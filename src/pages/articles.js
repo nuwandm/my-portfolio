@@ -4,8 +4,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { React, useRef } from "react";
 import Image from "next/image";
-import article1 from "../../public/images/articles/pagination component in reactjs.jpg";
-import article2 from "../../public/images/articles/create loading screen in react js.jpg";
+import article1 from "../../public/images/articles/Js.jpg";
+import article2 from "../../public/images/articles/react.jpg";
 import article3 from "../../public/images/articles/create modal component in react using react portals.png";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
@@ -112,22 +112,22 @@ const articles = () => {
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
         <Layout className="pt-16">
           <AnimatedText
-            text="Knowledge Sharing"
+            text="My Articles"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <ul className="grid grid-cols-2 gap-16 lag:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               img={article1}
-              title="Buld A Custom Pagination Component In ReactJs From Scratch"
-              summery="short summery about this Artcle "
-              link="/"
-              time="9 min to read"
+              title="How JavaScript Works"
+              summery="This article provides a brief overview of how JavaScript code is executed, and discusses the concepts of synchronous and asynchronous programming in JavaScript. It emphasizes that JavaScript is both synchronous and asynchronous, and that while it is single-threaded, it can handle asynchronous operations efficiently through APIs that use a separate thread pool to execute operations without blocking the main thread."
+              link="https://wordpress.com/post/nuwanmadusanka3.wordpress.com/30"
+              time="15 min to read"
             />
             <FeaturedArticle
               img={article2}
-              title="Buld A Custom Pagination Component In ReactJs From Scratch"
-              summery="short summery about this Artcle "
-              link="/"
+              title="Getting Start With React."
+              summery="This article is a beginner's guide to React, covering what it is and its benefits, how to set up a development environment for React, and a step-by-step guide for creating a new React application from scratch."
+              link="https://wordpress.com/post/nuwanmadusanka3.wordpress.com/13"
               time="9 min to read"
             />
           </ul>

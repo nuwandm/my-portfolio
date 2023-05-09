@@ -8,7 +8,9 @@ import { GithubIcon } from "@/components/Icons";
 import project1 from "../../public/images/projects/project1.jpg";
 import project2 from "../../public/images/projects/Project2.jpg";
 import project3 from "../../public/images/projects/project3.png";
+import project4 from "../../public/images/projects/project4.jpg";
 import { motion } from "framer-motion";
+
 const FramerImage = motion(Image);
 const FeateruedProject = ({ type, title, summery, img, link, github }) => {
   return (
@@ -176,12 +178,12 @@ the influencing factors"
             </div>
             <div className="col-span-12">
               <FeateruedProject
-                title="website for Coffie shop"
+                title="i phone Calculator Clone in React"
                 type="Featured Project"
-                summery="Little summery"
-                img={project1}
-                link="/"
-                github="/"
+                summery="https://nuwandm.github.io/iphone_calculator/"
+                img={project4}
+                link="https://nuwandm.github.io/iphone_calculator/"
+                github="https://github.com/nuwandm/iphone_calculator"
               />
             </div>
           </div>

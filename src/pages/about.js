@@ -31,7 +31,7 @@ const about = () => {
               <p className="font-medium">
                 Hi, my name is Nuwan and I am a software engineer and UI/UX
                 developer with a degree in Computing and Information Systems
-                from Sbaragamuwa University of Sri Lanka. I have 2 years of
+                from Sabaragamuwa University of Sri Lanka. I have 2 years of
                 experience in the field and am passionate about using technology
                 to create solutions that make a positive impact on people's
                 lives.
@@ -73,7 +73,7 @@ const about = () => {
                   <AnimatedNumbers value={2} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm ">
-                  Years Of Experiance
+                  Years Of Experience
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center ">
@@ -81,7 +81,7 @@ const about = () => {
                   <AnimatedNumbers value={5} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm  ">
-                  Projects Compleated
+                  Projects Completed
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center ">

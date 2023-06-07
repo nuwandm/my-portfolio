@@ -89,7 +89,7 @@ const about = () => {
                   <AnimatedNumbers value={100} />%
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm  ">
-                  Dedication on task
+                  Dedication on tasks
                 </h2>
               </div>
             </div>

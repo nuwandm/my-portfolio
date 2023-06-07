@@ -49,7 +49,15 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2  ">
           <Details
-            position="software Engineer"
+            position="Associate Software Engineer"
+            company="DMS Software Engineering (Pvt) Ltd"
+            address=" Rajagiriya, Sri Lanka."
+            companyLink="https://www.dmsswe.com/"
+            time="2023-present"
+            work=" I am an Associate Software Engineer with a strong proficiency in the MERN stack (MongoDB, Express.js, React, and Node.js). With a passion for building scalable and user-friendly web applications, I strive to deliver innovative solutions that meet both technical and business requirements. With a solid foundation in front-end and back-end development, I excel in creating responsive UIs, implementing efficient APIs, and ensuring seamless integration between the different components of a project. I am eager to contribute my skills and knowledge to impactful projects and collaborate with talented teams to drive digital innovation. Explore my portfolio to see examples of my work and get in touch to discuss how I can help bring your ideas to life."
+          />
+          <Details
+            position=" Associate Software Engineer"
             company="SmartCode"
             address=" Negombo
 Sri Lanka."

@@ -23,6 +23,7 @@ const Skills = () => {
       <h2 className=" font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
         Skills
       </h2>
+        <br/>
       <div className="w-full h-screen realative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
       lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]
       lg:bg-circularLightLg lg:dark:bg-circularDarkLg
@@ -35,12 +36,15 @@ const Skills = () => {
         >
           web
         </motion.div>
-        <Skill name="HTML" x="-25vw" y="2vw" />
-        <Skill name="CSS" x="-5vw" y="-12vw" />
-        <Skill name="JavaScript" x="20vw" y="3vw" />
-        <Skill name="ReactJS" x="0" y="12vw" />
-        <Skill name="NextJS" x="-20vw" y="-14vw" />
+        <Skill name="HTML" x="-24vw" y="2vw" />
+        <Skill name="CSS" x="-5vw" y="-13vw" />
+        <Skill name="JavaScript" x="24vw" y="3vw" />
+        <Skill name="ReactJS" x="0" y="13vw" />
+        <Skill name="Next.js" x="-20vw" y="-14vw" />
         <Skill name="Tailwind CSS" x="20vw" y="-14vw" />
+        <Skill name="Mongo DB" x="38vw" y="-6vw" />
+        <Skill name="Node.js" x="33vw" y="12vw" />
+        <Skill name="Express.js" x="-40vw" y="1vw" />
         <Skill name="Redux" x="20vw" y="14vw" />
         <Skill name="Firebase" x="-20vw" y="14vw" />
       </div>

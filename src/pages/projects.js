@@ -5,7 +5,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "@/components/Icons";
-import project1 from "../../public/images/projects/project1.jpg";
+import project1 from "../../public/images/projects/project1.png";
 import project2 from "../../public/images/projects/Project2.jpg";
 import project3 from "../../public/images/projects/project3.png";
 import project4 from "../../public/images/projects/project4.jpg";
@@ -148,12 +148,12 @@ const projects = () => {
           <div className="grid grid-col-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 ">
             <div className="col-span-12">
               <FeateruedProject
-                title="React Dashboard"
+                title="SunChat"
                 type="Featured Project"
-                summery="React dashboard using JavaScript, CSS, and HTML"
+                summery="Real-time messaging app built with MERN stack and Socket.io."
                 img={project1}
-                link="https://github.com/nuwandm/admin_dashboard"
-                github="https://github.com/nuwandm/admin_dashboard"
+                link="https://sunchat.onrender.com"
+                github="https://github.com/nuwandm/SunChat"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">

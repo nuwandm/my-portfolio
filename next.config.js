@@ -1,12 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  basePath: "/my-portfolio",
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
-  assetPrefix: '/my-portfolio/',
-};
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
 
-module.exports = nextConfig;
+module.exports = {
+  output: 'export',
+  basePath: isGithubPages ? '/my-portfolio' : '',
+  assetPrefix: isGithubPages ? '/my-portfolio/' : '',
+};

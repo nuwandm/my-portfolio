@@ -4,6 +4,9 @@ const nextConfig = {
   basePath: "/my-portfolio",
   assetPrefix: "/my-portfolio/",
   trailingSlash: true,
+  images: {
+    unoptimized: true, 
+  },
 };
 
 module.exports = nextConfig;

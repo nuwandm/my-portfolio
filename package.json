@@ -2,11 +2,14 @@
   "name": "developer-portfolio-starter-code",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nuwandm.github.io/my-portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export -o docs",
+    "deploy": "npm run build && npm run export"
   },
   "dependencies": {
     "eslint": "8.36.0",

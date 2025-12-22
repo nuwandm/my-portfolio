@@ -138,12 +138,123 @@ const projects = () => {
       <Head>
         <title>Nuwan | Projects Page</title>
         <meta name="description" content="any description" />
+        <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Playfair+Display:wght@700;900&display=swap');
+
+          .newspaper-bg {
+            background-color: #f5f3e8;
+            background-image:
+              /* Paper texture noise */
+              url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"),
+              /* Horizontal lines (like lined paper) */
+              repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 23px,
+                rgba(139, 119, 101, 0.08) 23px,
+                rgba(139, 119, 101, 0.08) 24px
+              ),
+              /* Aged paper stains */
+              radial-gradient(ellipse at 20% 30%, rgba(139, 119, 101, 0.05) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 70%, rgba(139, 119, 101, 0.04) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 50%, rgba(139, 119, 101, 0.03) 0%, transparent 60%),
+              /* Base gradient for aged paper */
+              linear-gradient(
+                180deg,
+                #f5f3e8 0%,
+                #ebe7d5 50%,
+                #e8e3cf 100%
+              );
+            position: relative;
+          }
+
+          .newspaper-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+              /* Vertical column dividers */
+              repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent calc(33.333% - 1px),
+                rgba(139, 119, 101, 0.15) calc(33.333% - 1px),
+                rgba(139, 119, 101, 0.15) calc(33.333%),
+                transparent calc(33.333%),
+                transparent calc(66.666% - 1px),
+                rgba(139, 119, 101, 0.15) calc(66.666% - 1px),
+                rgba(139, 119, 101, 0.15) calc(66.666%)
+              );
+            pointer-events: none;
+            opacity: 0.3;
+          }
+
+          .dark .newspaper-bg {
+            background-color: #2b2621;
+            background-image:
+              /* Paper texture noise for dark mode */
+              url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E"),
+              /* Horizontal lines */
+              repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 23px,
+                rgba(255, 255, 255, 0.05) 23px,
+                rgba(255, 255, 255, 0.05) 24px
+              ),
+              /* Aged paper effect for dark */
+              radial-gradient(ellipse at 20% 30%, rgba(101, 87, 73, 0.2) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 70%, rgba(101, 87, 73, 0.15) 0%, transparent 50%),
+              /* Base gradient */
+              linear-gradient(
+                180deg,
+                #2b2621 0%,
+                #221f1b 50%,
+                #1a1814 100%
+              );
+          }
+
+          .dark .newspaper-bg::before {
+            background-image:
+              repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent calc(33.333% - 1px),
+                rgba(255, 255, 255, 0.08) calc(33.333% - 1px),
+                rgba(255, 255, 255, 0.08) calc(33.333%),
+                transparent calc(33.333%),
+                transparent calc(66.666% - 1px),
+                rgba(255, 255, 255, 0.08) calc(66.666% - 1px),
+                rgba(255, 255, 255, 0.08) calc(66.666%)
+              );
+            opacity: 0.2;
+          }
+
+          /* Newspaper-style heading font */
+          .newspaper-heading {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            border-top: 3px double rgba(139, 119, 101, 0.5);
+            border-bottom: 3px double rgba(139, 119, 101, 0.5);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+          }
+
+          .dark .newspaper-heading {
+            border-color: rgba(255, 255, 255, 0.3);
+          }
+        `}</style>
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light newspaper-bg min-h-screen">
         <Layout className="pt-16">
           <AnimatedText
             text={"My Projects"}
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl newspaper-heading"
           />
           <div className="grid grid-col-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0 ">
             <div className="col-span-12">

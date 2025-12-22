@@ -49,12 +49,20 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2  ">
           <Details
+            position="Software Engineer"
+            company="DMS Software Engineering (Pvt) Ltd"
+            address="Rajagiriya, Sri Lanka"
+            companyLink="https://www.dmsswe.com/"
+            time="2024-Present (9 months)"
+            work="Currently working as a Software Engineer at DMS Software Engineering, where I am a core contributor to the DOCFLO project. I architect and develop scalable backend solutions using Clean Architecture principles and TypeScript with Node.js. My expertise includes implementing database-independent systems through dependency inversion, ensuring high maintainability and testability. I specialize in designing loosely coupled systems that adhere to SOLID principles, enabling seamless integration and future scalability. Working with modern development practices, I focus on building robust enterprise-level applications that deliver exceptional performance and reliability."
+          />
+          <Details
             position="Associate Software Engineer"
             company="DMS Software Engineering (Pvt) Ltd"
-            address=" Rajagiriya, Sri Lanka."
+            address="Rajagiriya, Sri Lanka"
             companyLink="https://www.dmsswe.com/"
-            time="2023-present"
-            work=" I am an Associate Software Engineer with a strong proficiency in the MERN stack (MongoDB, Express.js, React, and Node.js). With a passion for building scalable and user-friendly web applications, I strive to deliver innovative solutions that meet both technical and business requirements. With a solid foundation in front-end and back-end development, I excel in creating responsive UIs, implementing efficient APIs, and ensuring seamless integration between the different components of a project. I am eager to contribute my skills and knowledge to impactful projects and collaborate with talented teams to drive digital innovation. Explore my portfolio to see examples of my work and get in touch to discuss how I can help bring your ideas to life."
+            time="2023-2024"
+            work="Worked as an Associate Software Engineer with strong proficiency in the MERN stack (MongoDB, Express.js, React, and Node.js). Built scalable and user-friendly web applications while delivering innovative solutions that met both technical and business requirements. Developed responsive UIs, implemented efficient APIs, and ensured seamless integration between different components of projects. Collaborated with talented teams to drive digital innovation and deliver impactful solutions."
           />
           <Details
             position=" Trainee Software Engineer"

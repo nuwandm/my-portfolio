@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Hide default cursor globally on desktop (screens > 1023px) */
+@media (min-width: 1024px) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Ensure cursor is visible on mobile */
+@media (max-width: 1023px) {
+  * {
+    cursor: auto !important;
+  }
+}

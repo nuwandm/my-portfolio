@@ -15,15 +15,19 @@ import useThemeSwicher from "./hooks/useThemeSwicher";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
-  //   console.log(router); check what provides by router in the console
+  const isActive = router.asPath === href;
+
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link
+      href={href}
+      className={`${className} relative group px-3 py-2 rounded-lg transition-all duration-300
+        ${isActive ? 'text-primary dark:text-primaryDark font-bold' : 'hover:text-primary dark:hover:text-primaryDark'}`}
+    >
       {title}
       <span
-        className={`h-[1px] inline-block  bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
-        ${router.asPath === href ? "w-full" : "w-0"}
-        dark:bg-light
-        `}
+        className={`h-[2px] inline-block bg-gradient-to-r from-primary to-primaryDark absolute left-0 -bottom-0.5
+        group-hover:w-full transition-[width] ease duration-300 rounded-full
+        ${isActive ? "w-full" : "w-0"}`}
       >
         &nbsp;
       </span>
@@ -33,24 +37,26 @@ const CustomLink = ({ href, title, className = "" }) => {
 // for mobile ...👇👇
 const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   const router = useRouter();
+  const isActive = router.asPath === href;
+
   const handleClick = () => {
     toggle();
     router.push(href);
   };
 
   return (
-    // not like desktop  we have button on behalf of the links  for make to close after cliked
     <button
       href={href}
-      className={`${className} relative group text-light dark:text-dark my-2 `}
+      className={`${className} relative group text-light dark:text-dark my-3 text-xl font-semibold
+        px-6 py-3 rounded-lg transition-all duration-300
+        ${isActive ? 'bg-light/20 dark:bg-dark/20 scale-105' : 'hover:bg-light/10 dark:hover:bg-dark/10'}`}
       onClick={handleClick}
     >
       {title}
       <span
-        className={`h-[1px] inline-block  bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
-        ${router.asPath === href ? "w-full" : "w-0"}
-        dark:bg-dark
-        `}
+        className={`h-[2px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5
+        group-hover:w-full transition-[width] ease duration-300 rounded-full
+        ${isActive ? "w-full" : "w-0"}`}
       >
         &nbsp;
       </span>
@@ -76,6 +82,8 @@ const NavBar = () => {
       <button
         className=" flex-col justify-center items-center  hidden lg:flex "
         onClick={handleClick}
+        aria-label="Toggle navigation menu"
+        aria-expanded={isOpen}
       >
         <span
           className={`bg-dark dark:bg-light transition-all duration-300 ease-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${
@@ -94,14 +102,15 @@ const NavBar = () => {
         ></span>
       </button>
       <div className="w-full flex justify-between lg:hidden">
-        <nav>
+        <nav aria-label="Main navigation">
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
-          <CustomLink href="/articles" title="Articles" className="ml-4" />
+          <CustomLink href="/articles" title="Articles" className="mx-4" />
+          <CustomLink href="/contact" title="Contact" className="ml-4" />
         </nav>
 
-        <nav className="flex items-center justify-center flex-wrap">
+        <nav className="flex items-center justify-center flex-wrap" aria-label="Social media links">
           {/* target={"_blank"} will open this link in new tab  */}
           <motion.a
             href="/"
@@ -109,6 +118,7 @@ const NavBar = () => {
             whileHover={{ y: -3 }}
             whileTap={{ scale: 3 }}
             className="w-6 mr-3"
+            aria-label="Visit Twitter profile"
           >
             <TwitterIcon />
           </motion.a>
@@ -118,6 +128,7 @@ const NavBar = () => {
             whileHover={{ y: -3 }}
             whileTap={{ scale: 3 }}
             className="w-6 mx-3"
+            aria-label="Visit GitHub profile"
           >
             <GithubIcon />
           </motion.a>
@@ -127,6 +138,7 @@ const NavBar = () => {
             whileHover={{ y: -3 }}
             whileTap={{ scale: 3 }}
             className="w-6 mx-3"
+            aria-label="Visit LinkedIn profile"
           >
             <LinkedInIcon />
           </motion.a>
@@ -136,6 +148,7 @@ const NavBar = () => {
             whileHover={{ y: -3 }}
             whileTap={{ scale: 3 }}
             className="w-6 ml-3"
+            aria-label="Visit Facebook profile"
           >
             <FaceBookIcon />
           </motion.a>
@@ -144,6 +157,7 @@ const NavBar = () => {
           ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
           `}
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            aria-label={`Switch to ${mode === "light" ? "dark" : "light"} mode`}
           >
             {mode === "dark" ? (
               <SunIcon className={"fill-dark"} />
@@ -157,10 +171,12 @@ const NavBar = () => {
       {/* if isOpen ? {div}: null  👇😍👀 */}
       {isOpen ? (
         <motion.div
-          initial={{ sclae: 0, opacity: 0, x: "-50%", y: "-50%" }}
-          animate={{ sclae: 1, opacity: 1 }}
-          className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-      bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32 "
+          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0, opacity: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      bg-dark/95 dark:bg-light/90 rounded-2xl backdrop-blur-lg py-32 shadow-2xl border-2 border-light/10 dark:border-dark/10"
         >
           <nav className="flex items-center flex-col justify-center">
             <CustomMobileLink
@@ -184,6 +200,12 @@ const NavBar = () => {
             <CustomMobileLink
               href="/articles"
               title="Articles"
+              className=""
+              toggle={handleClick}
+            />
+            <CustomMobileLink
+              href="/contact"
+              title="Contact"
               className=""
               toggle={handleClick}
             />

@@ -10,7 +10,7 @@ import {
   SunIcon,
   MoonIcon,
 } from "./Icons";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import useThemeSwicher from "./hooks/useThemeSwicher";
 
 const CustomLink = ({ href, title, className = "" }) => {
@@ -47,14 +47,14 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   return (
     <button
       href={href}
-      className={`${className} relative group text-light dark:text-dark my-3 text-xl font-semibold
+      className={`${className} relative group text-dark dark:text-light my-3 text-xl font-semibold
         px-6 py-3 rounded-lg transition-all duration-300
-        ${isActive ? 'bg-light/20 dark:bg-dark/20 scale-105' : 'hover:bg-light/10 dark:hover:bg-dark/10'}`}
+        ${isActive ? 'bg-dark/20 dark:bg-light/20 scale-105' : 'hover:bg-dark/10 dark:hover:bg-light/10'}`}
       onClick={handleClick}
     >
       {title}
       <span
-        className={`h-[2px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5
+        className={`h-[2px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5
         group-hover:w-full transition-[width] ease duration-300 rounded-full
         ${isActive ? "w-full" : "w-0"}`}
       >
@@ -75,7 +75,7 @@ const NavBar = () => {
   return (
     <header
       className="w-full px-32 py-8 font-medium flex items-center justify-between
-    dark:text-light relative z-10 lg:px-16  md:px-12 sm:px-8"
+    dark:text-light relative z-50 lg:px-16  md:px-12 sm:px-8"
     >
       {/* button with hamberger...  */}
       {/* desktop menu div  */}
@@ -169,15 +169,50 @@ const NavBar = () => {
       </div>
       {/* mobile menu div */}
       {/* if isOpen ? {div}: null  👇😍👀 */}
-      {isOpen ? (
-        <motion.div
-          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0, opacity: 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-      bg-dark/95 dark:bg-light/90 rounded-2xl backdrop-blur-lg py-32 shadow-2xl border-2 border-light/10 dark:border-dark/10"
-        >
+      <AnimatePresence>
+        {isOpen && (
+          <>
+          {/* Backdrop overlay */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-dark/50 dark:bg-dark/70 backdrop-blur-sm z-[90]"
+            onClick={handleClick}
+            aria-hidden="true"
+          />
+          {/* Menu content */}
+          <motion.div
+            initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="min-w-[70vw] sm:min-w-[90vw] flex flex-col justify-between z-[100] items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      bg-light/95 dark:bg-dark/95 rounded-2xl backdrop-blur-md py-32 shadow-2xl border-2 border-dark/20 dark:border-light/20"
+          >
+          {/* Close button */}
+          <button
+            className="absolute top-6 right-6 flex items-center justify-center w-10 h-10 rounded-full
+            bg-dark/10 dark:bg-light/10 hover:bg-dark/20 dark:hover:bg-light/20
+            transition-all duration-300 group"
+            onClick={handleClick}
+            aria-label="Close menu"
+          >
+            <span className="sr-only">Close menu</span>
+            <svg
+              className="w-6 h-6 text-dark dark:text-light"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
           <nav className="flex items-center flex-col justify-center">
             <CustomMobileLink
               href="/"
@@ -218,7 +253,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 3 }}
-              className="w-6 mr-3 sm:mx-1"
+              className="w-6 mr-3 sm:mx-1 text-dark dark:text-light"
             >
               <TwitterIcon />
             </motion.a>
@@ -227,7 +262,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 3 }}
-              className="w-6 mx-3 bg-light dark:bg-dark rounded-full sm:mx-1"
+              className="w-6 mx-3 bg-dark dark:bg-light rounded-full sm:mx-1 text-light dark:text-dark"
             >
               <GithubIcon />
             </motion.a>
@@ -236,7 +271,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 3 }}
-              className="w-6 mx-3 sm:mx-1"
+              className="w-6 mx-3 sm:mx-1 text-dark dark:text-light"
             >
               <LinkedInIcon />
             </motion.a>
@@ -245,7 +280,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 3 }}
-              className="w-6 ml-3 sm:mx-1"
+              className="w-6 ml-3 sm:mx-1 text-dark dark:text-light"
             >
               <FaceBookIcon />
             </motion.a>
@@ -254,6 +289,7 @@ const NavBar = () => {
           ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
           `}
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              aria-label={`Switch to ${mode === "light" ? "dark" : "light"} mode`}
             >
               {mode === "dark" ? (
                 <SunIcon className={"fill-dark"} />
@@ -263,7 +299,9 @@ const NavBar = () => {
             </button>
           </nav>
         </motion.div>
-      ) : null}
+        </>
+        )}
+      </AnimatePresence>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
       </div>

@@ -6,11 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "@/components/Icons";
 import project1 from "../../public/images/projects/project1.png";
-import smartPP from "../../public/images/Smart PP.png";
+import smartPP from "../../public/images/projects/Smart PP.png";
+import escapeWithAmila from "../../public/images/projects/scape with amila.png";
 import project2 from "../../public/images/projects/Project2.jpg";
 import project3 from "../../public/images/projects/project3.png";
 import project4 from "../../public/images/projects/project4.jpg";
 import deadlinebuddy from "../../public/images/projects/deadlinebuddy1.jpg";
+import udawalawaTaxi from "../../public/images/projects/udawalawa taxt.png";
 import { motion } from "framer-motion";
 
 const FramerImage = motion(Image);
@@ -237,7 +239,7 @@ const projects = () => {
                 title="Escape with Amila Tours"
                 type="Freelance · Travel Agency Website"
                 summery="Travel agency website with tour packages, booking, and destination highlights."
-                img={project3}
+                img={escapeWithAmila}
                 link="https://escapewithamila.com"
                 github="/"
               />
@@ -247,7 +249,7 @@ const projects = () => {
                 title="UdawalawaTaxi — Taxi & Tour Booking Platform"
                 type="Freelance · Full Stack"
                 summery="A taxi and tour booking web platform serving the Udawalawe region, featuring real-time availability, route management, and customer booking flows."
-                img={project4}
+                img={udawalawaTaxi}
                 link="https://udawalawataxi.com"
                 github="/"
               />

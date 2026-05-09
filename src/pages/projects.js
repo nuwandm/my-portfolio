@@ -13,6 +13,8 @@ import project3 from "../../public/images/projects/project3.png";
 import project4 from "../../public/images/projects/project4.jpg";
 import deadlinebuddy from "../../public/images/projects/deadlinebuddy1.jpg";
 import udawalawaTaxi from "../../public/images/projects/udawalawa taxt.png";
+import bestConverts from "../../public/images/projects/bestconverts.png";
+import kidsStories from "../../public/images/projects/kidsstori.png";
 import { motion } from "framer-motion";
 
 const FramerImage = motion(Image);
@@ -284,7 +286,7 @@ const projects = () => {
                 title="BestConverts — Unit Conversion Web App"
                 type="Web App · React"
                 summery="A fast, clean unit conversion tool covering length, weight, temperature, and more."
-                img={project2}
+                img={bestConverts}
                 link="https://bestconverts.com"
                 github="/"
               />
@@ -294,7 +296,7 @@ const projects = () => {
                 title="Kids Stories — Educational Web Platform"
                 type="Web App · Next.js"
                 summery="An educational storytelling platform for children with interactive stories and audio."
-                img={project3}
+                img={kidsStories}
                 link="https://kidsstories-bay.vercel.app"
                 github="/"
               />
@@ -305,7 +307,7 @@ const projects = () => {
                 type="Chrome Extension"
                 summery="A Chrome extension for real-time currency conversion supporting multiple currencies."
                 img={project4}
-                link="https://lnkd.in/g67BN8-K"
+                link="https://chromewebstore.google.com/detail/currency-converter-pro/dmomjgdbofbhcjeapinfbdbbhmobbakc"
                 github="/"
               />
             </div>

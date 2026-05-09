@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GithubIcon } from "@/components/Icons";
 import project1 from "../../public/images/projects/project1.png";
+import smartPP from "../../public/images/Smart PP.png";
 import project2 from "../../public/images/projects/Project2.jpg";
 import project3 from "../../public/images/projects/project3.png";
 import project4 from "../../public/images/projects/project4.jpg";
@@ -216,7 +217,7 @@ const projects = () => {
                 title="Dream Labs Smart PP — Clinic Management System"
                 type="Freelance · Full Stack"
                 summery="A comprehensive hospital ecosystem web application for managing patient records, appointments, doctor schedules, and billing. Built with the MERN stack for a private practice center."
-                img={project1}
+                img={smartPP}
                 link="https://private-practice-center-client.vercel.app"
                 github="/"
               />

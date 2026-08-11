@@ -4,7 +4,6 @@ import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import CustomCursor from "@/components/CustomCursor";
 import ParticleBackground from "@/components/ParticleBackground";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
@@ -26,7 +25,6 @@ export default function App({ Component, pageProps }) {
       <main
         className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen transition-colors duration-300 relative overflow-hidden`}
       >
-        <CustomCursor />
         <ParticleBackground />
         <NavBar />
         <AnimatePresence mode="wait">
